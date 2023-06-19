@@ -3,11 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script defer src="script.js"></script>
   <title>Document</title>
 </head>
 <body>
-  <button id="btn" onclick="fetch()">Click me</button>
+  <button id="btn" onclick="Data()">Click me</button>
   <div id="output"></div>
+  
+  <script>
+    function Data() {
+      const output = document.getElementById("output");
+      const url = "https://test.tanmaybajaj.repl.co/";
+      console.log("Fetching...");
+      
+      fetch(url, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })
+        .then(response => response.json())
+        .then(data => {
+          // Process the retrieved data
+          output.innerText = JSON.stringify(data);
+        })
+        .catch(error => {
+          console.error("Error:", error);
+        });
+    }
+  </script>
 </body>
 </html>
