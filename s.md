@@ -1,3 +1,13 @@
+🛠️
+AVS Implementation
+Every AVS must implement both execution and validation logic.
+
+It's recommended to use the AVS Samples repo as a boilerplate for your AVS. It includes a couple of examples that make it clearer how the network operates and will get you up and running in no time.
+
+Setup
+Make sure you already deployed your AVS contracts prior to running the examples.
+See Contracts Deployment.
+
 To start, clone the AVS Samples repo:
 
 Copy
